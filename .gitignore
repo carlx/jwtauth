@@ -1,3 +1,4 @@
+/web/frontend/bower_components
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*

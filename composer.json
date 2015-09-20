@@ -20,7 +20,10 @@
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "friendsofsymfony/rest-bundle": "^1.7",
         "nelmio/cors-bundle": "^1.4",
-        "lexik/jwt-authentication-bundle": "^1.0"
+        "lexik/jwt-authentication-bundle": "^1.0",
+        "willdurand/rest-extra-bundle": "@dev",
+        "jms/serializer-bundle": "^0.13.0"
+
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

@@ -6,3 +6,9 @@ user:
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+jwt_user:
+    type: rest
+    prefix: /api
+    resource: "@UserBundle/Resources/config/routes.yml"
+
