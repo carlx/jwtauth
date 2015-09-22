@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body ng-app="jwt">
+<div class="login-box-body" ng-controller="LoginController as login">
+	<p class="login-box-msg">Zaloguj się </p>
+	<form role="form" novalidate>
+		<div class="alert alert-danger" ng-if="login.errorMessage">
+			{{ login.errorMessage }}
+		</div>
+		<div class="form-group has-feedback">
+			<input type="text"
+				   ng-model="login.credentials.username"
+				   class="form-control"
+				   id="userName"
+				   required
+				   placeholder="Użytkownik"
+					>
+			<span class="glyphicon glyphicon-user form-control-feedback"></span>
+		</div>
+		<div class="form-group has-feedback">
+			<input type="password"
+				   ng-model="login.credentials.password"
+				   class="form-control"
+				   id="userPassword"
+				   required
+				   placeholder="Hasło"
+					>
+			<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+		</div>
+		<div class="row">
+			<div class="col-xs-8">
+
+			</div><!-- /.col -->
+			<div class="col-xs-4">
+				<button type="submit" ng-click="login.submit()" class="btn btn-primary btn-block btn-flat">Zaloguj się</button>
+			</div><!-- /.col -->
+		</div>
+	</form>
+</div><!-- /.login-box-body -->
+
+<script src="bower_components/angular/angular.js" type="application/javascript"></script>
+<script src="bower_components/lodash/lodash.js" type="application/javascript"></script>
+<script src="bower_components/restangular/dist/restangular.js" type="application/javascript"></script>
+<script src="bower_components/ngstorage/ngStorage.js" type="application/javascript"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js" type="application/javascript"></script>
+
+
+<script src="bower_components/restangular/dist/restangular.js" type="application/javascript"></script>
+<script src="src/index.module.js" type="application/javascript"></script>
+<script src="src/index.config.js" type="application/javascript"></script>
+<script src="src/index.constants.js" type="application/javascript"></script>
+<script src="src/index.run.js" type="application/javascript"></script>
+
+<script src="src/login.controller.js" type="application/javascript"></script>
+
+
+</body>
+</html>

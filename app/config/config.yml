@@ -82,7 +82,7 @@ swiftmailer:
 #FOS UserBundle Configuration
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
-    firewall_name: main
+    firewall_name: login
     user_class: UserBundle\Entity\Users
 
 #REST Bundle Configuration
@@ -124,5 +124,10 @@ nelmio_cors:
             allow_origin: ['*']
             allow_headers: ['*']
             allow_methods: ['POST','GET','PUT','DELETE']
+            max_age: 3600
+        '^/api/auth':
+            allow_origin: ['*']
+            allow_headers: ['*']
+            allow_methods: ['POST']
             max_age: 3600
 

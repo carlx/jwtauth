@@ -8,9 +8,9 @@ security:
             ROLE_ADMIN: ROLE_USER
 
     access_control:
-            - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-            - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
-#
+            - { path: ^/api/auth, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+            - { path: ^/api/v1, roles: IS_AUTHENTICATED_FULLY }
+
     providers:
             in_memory:
                             memory:
@@ -22,12 +22,12 @@ security:
 
     firewalls:
         login:
-                pattern:  ^/api/v1/login
+                pattern:  ^/api/auth
                 stateless: true
                 anonymous: false
                 provider:   fos_userbundle
                 form_login:
-                    check_path:               /api/v1/logins/checks
+                    check_path:               /api/auth/logins/checks
                     username_parameter:       username
                     password_parameter:       password
                     success_handler:          lexik_jwt_authentication.handler.authentication_success
@@ -36,12 +36,8 @@ security:
                 logout:
                     path: /api/v1/logout
         api:
-                pattern:   ^/api/v1
+                pattern:   ^/api
                 stateless: true
                 lexik_jwt: ~
-
-#        dev:
-#                    pattern: ^/(_(profiler|wdt|error)|css|images|js)/
-#                    security: false
         default:
                     anonymous: ~

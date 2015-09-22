@@ -1,5 +1,5 @@
 security:
     type: rest
-    prefix: /v1
+    prefix: /auth
     resource: @UserBundle/Controller/SecurityController.php
     name_prefix:  api_1_ # naming collision
