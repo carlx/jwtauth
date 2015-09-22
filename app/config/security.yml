@@ -34,7 +34,7 @@ security:
                     failure_handler:          lexik_jwt_authentication.handler.authentication_failure
                     require_previous_session: false
                 logout:
-                    path: /api/v1/logout
+                    path: /api/auth/logouts
         api:
                 pattern:   ^/api
                 stateless: true
