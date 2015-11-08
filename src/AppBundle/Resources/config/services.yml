@@ -1,0 +1,4 @@
+services:
+    example.service:
+        class:        AppBundle\Services\ExampleService
+        arguments:    ["@doctrine.orm.entity_manager","@logger"]
