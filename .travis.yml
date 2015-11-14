@@ -4,3 +4,5 @@ php:
 script: phpunit -c app/
 before_script:
   - composer install
+  - php app/console doctrine:database:create
+  - php app/console doctrine:schema:create
