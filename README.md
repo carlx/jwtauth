@@ -1,3 +1,4 @@
+https://travis-ci.org/carlx/jwtauth.svg?branch=master
 Symfony Standard Edition
 ========================
 
