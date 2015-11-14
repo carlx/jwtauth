@@ -50,6 +50,23 @@ class ExampleServiceTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(0, $result);
     }
 
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testAdd()
+    {
+        $this->assertEquals($expected, $a + $b);
+    }
+
+    public function additionProvider()
+    {
+        return array(
+            array(0, 0, 0),
+            array(0, 1, 1),
+            array(1, 0, 1),
+            array(1, 1, 3)
+        );
+    }
 
     public function tearDown()
     {
