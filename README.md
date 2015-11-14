@@ -1,4 +1,4 @@
-https://travis-ci.org/carlx/jwtauth.svg?branch=master
+<img src="https://travis-ci.org/carlx/jwtauth.svg?branch=master"></img>
 Symfony Standard Edition
 ========================
 
