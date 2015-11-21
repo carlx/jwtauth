@@ -1,0 +1,6 @@
+doctrine_cache:
+    providers:
+        my_redis_cache:
+            redis:
+                host: localhost
+                port: 6379

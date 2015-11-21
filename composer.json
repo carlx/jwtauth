@@ -22,7 +22,8 @@
         "nelmio/cors-bundle": "^1.4",
         "lexik/jwt-authentication-bundle": "^1.0",
         "willdurand/rest-extra-bundle": "@dev",
-        "jms/serializer-bundle": "^0.13.0"
+        "jms/serializer-bundle": "^0.13.0",
+        "doctrine/doctrine-cache-bundle": "^1.2"
 
     },
     "require-dev": {

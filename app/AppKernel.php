@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             new Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
             new Nelmio\CorsBundle\NelmioCorsBundle(),
+            new \Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
