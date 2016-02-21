@@ -2,3 +2,7 @@ services:
     example.service:
         class:        AppBundle\Services\ExampleService
         arguments:    ["@doctrine.orm.entity_manager","@logger"]
+    simple.listener:
+          class:        AppBundle\Events\SimpleListener
+          tags:
+              - { name: kernel.event_subscriber }
